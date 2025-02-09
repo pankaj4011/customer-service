@@ -53,7 +53,7 @@ class CustomerServiceApplicationTests {
 		var response = testRestTemplate.getForEntity("/api/customers/1", CustomerDto.class);
 		Assertions.assertTrue(response.getStatusCode().is2xxSuccessful());
 		Assertions.assertNotNull(response.getBody());
-		Assertions.assertEquals("sam",response.getBody().name());
+		Assertions.assertEquals("SAM",response.getBody().name());
 		Assertions.assertEquals(2,response.getBody().recommendedMovies().size());
 	}
 
